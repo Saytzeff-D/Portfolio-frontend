@@ -1,19 +1,5 @@
 import * as VueRouter from 'vue-router'
-import MyAdmin from '../components/Administrator.vue'
-import OverView from '../views/Overview.vue'
-
-const routes = [
-    {
-        path: '/portfolio',
-        component: MyAdmin,
-        children: [
-            {
-                path: '',
-                component: OverView
-            }
-        ]
-    }
-]
+import routes from './route'
 
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHistory(),
