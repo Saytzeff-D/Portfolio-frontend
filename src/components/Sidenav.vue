@@ -26,7 +26,7 @@
                     <router-link :to="{path: '/portfolio/resume'}" active-class="active" class="w3-bar-item w3-button w3-padding"><i class="fa fa-calendar fa-fw"></i>  Your Resume </router-link>
                     <router-link :to="{path: '/portfolio/project'}" active-class="active" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Your Projects </router-link>
                     <router-link :to="{path: '/portfolio/testimonial'}" active-class="active" class="w3-bar-item w3-button w3-padding"><i class="fa fa-ambulance fa-fw"></i>  Add Tesimonial </router-link>
-                    <router-link :to="{path: '/portfolio/getInTouch'}" active-class="active" class="w3-bar-item w3-button w3-padding"><i class="fa fa-comment-o fa-fw"></i> Hired & Contacts </router-link>
+                    <router-link :to="{path: '/portfolio/getInTouch'}" active-class="active" class="w3-bar-item w3-button w3-padding"><i class="fa fa-comment fa-fw"></i> Hired & Contacts </router-link>
                     <p data-toggle='modal' data-target='#logoutModal' class="w3-bar-item w3-button w3-padding w3-hide-large"><i class="fa fa-power-off fa-fw"></i>  Logout</p> 
                 </div>
             </nav>
