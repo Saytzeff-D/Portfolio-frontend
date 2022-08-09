@@ -60,7 +60,7 @@
 }
 </script>
 
-<style>
+<style scoped>
   .header{
         z-index: 4;
     }
