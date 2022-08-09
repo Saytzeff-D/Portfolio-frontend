@@ -1,12 +1,17 @@
-import axios from 'axios'
 import { createStore } from 'vuex'
+import asyncAction from './actions'
 
 const store = createStore({
     state() {
         return{
-            serverUrl: 'http://localhost:2020/portfolio/',
+            serverUrl: 'http://localhost:2020/',
             project: [],
-            projectError: ''
+            projectError: '',
+            expertiseTray: [],
+            eduTray: [],
+            eduError: '',
+            skillTray: [],
+            langTray: []
         }
     },
     mutations: {
@@ -15,6 +20,21 @@ const store = createStore({
         },
         projectError (state, payload){
             state.projectError = payload
+        },
+        setExpertiseTray(state, tray){
+            state.expertiseTray = tray
+        },
+        setEduArray(state, payload){
+            state.eduTray = payload
+        },
+        setEduError(state, payload){
+            state.eduError = payload
+        },
+        setSkillTray(state, payload){
+            state.skillTray = payload
+        },
+        setLangTray(state, payload){
+            state.langTray = payload
         }
     },
     getters: {
@@ -23,17 +43,24 @@ const store = createStore({
         },
         projectError (state){
             return state.projectError
+        },
+        getExpertiseTray(state){
+            return state.expertiseTray
+        },
+        getEduTray(state){
+            return state.eduTray
+        },
+        getEduError(state){
+            return state.eduError
+        },
+        getSkill(state){
+            return state.skillTray
+        },
+        getLanguage(state){
+            return state.langTray
         }
     },
-    actions: {
-        getAllProject(context){
-            axios.get(`${context.state.serverUrl}allProject`).then((res)=>{
-                context.commit('allProject', res.data.project)
-            }).catch((err)=>{
-                context.commit('projectError', err.name)
-            })
-        }
-    }
+    actions: asyncAction
 })
 
 export default store
