@@ -1,7 +1,6 @@
 <template>
     <div class="adminPage">
         <Sidenav />
-        <!-- {/* Page Content */} -->
             <div class="w3-main pageContent">
                 <router-view></router-view>
             </div>
