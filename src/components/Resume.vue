@@ -2,59 +2,58 @@
     <div class="text-justify mt-5 p-5">
         <p class="h2 font-weight-bold">Your Resume</p>
         <div class="container">
-            <p class="font-weight-bold">What are your expertise?</p>
-            <div class="form-row">
-                <div class="form-group col">
-                    <input class="form-control" placeholder="Duration" />
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#expertise" class="nav-link active" data-toggle="tab">
+                        Expertise
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link" data-toggle="tab">
+                        Education
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link" data-toggle="tab">
+                        Skills
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#language" class="nav-link" data-toggle="tab">
+                        Language
+                    </a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="expertise" class="container tab-pane active py-2">
+                    <p class="font-weight-bold">What are your expertise?</p>
+                    <MyExpertise />
                 </div>
-                <div class="form-group col">
-                    <input class="form-control" placeholder="Expert Career" />
+                <div id="education" class="container tab-pane py-2">
+                    <p class="font-weight-bold">Education History</p>
+                    <MyEducation />
                 </div>
-            </div>
-            <button class="btn btn-danger">Add Expertise</button>
+                <div id="skills" class="container tab-pane py-2">
+                    <p class="font-weight-bold">Skills</p>
+                    <MySkills />
+                </div>
+                <div id="language" class="container tab-pane py-2">
+                    <p class="font-weight-bold">Language</p>
+                    <MyLanguage />
+                </div>
+            </div>            
         </div>
-        <div class="container">
-            <p class="font-weight-bold">Education History</p>
-            <div class="form-row">
-                <div class="form-group col">
-                    <input class="form-control" placeholder="Certificate" />
-                </div>
-                <div class="form-group col">
-                    <input class="form-control" placeholder="Date Obtained" />
-                </div>
-            </div>
-            <button class="btn btn-danger">Save</button>
-        </div>
-        <div class="container">
-            <p class="font-weight-bold">Skills</p>
-            <div class="form-row">
-                <div class="form-group col-5">
-                    <input class="form-control" placeholder="Skills" />
-                </div>
-                <div class="form-group col-3">
-                    <input class="form-control" placeholder="Grade in Percentage" />
-                </div>
-            </div>
-            <button class="btn btn-danger">Add Skill</button>
-        </div>
-        <div class="container">
-            <p class="font-weight-bold">Language</p>
-            <div class="form-row">
-                <div class="form-group col-5">
-                    <input class="form-control" placeholder="Language" />
-                </div>
-                <div class="form-group col-3">
-                    <input class="form-control" placeholder="Grade in Percentage" />
-                </div>
-            </div>
-            <button class="btn btn-danger">Add Language</button>
-        </div>
-        <hr/>
     </div>
 </template>
 
 <script>
+import MyExpertise from '../views/Expertise.vue'
+import MyEducation from '../views/Education.vue'
+import MySkills from '../views/Skills.vue'
+import MyLanguage from '../views/Language.vue'
 export default {
+    components: { MyExpertise, MyEducation, MySkills, MyLanguage },
     name: 'AdminResume'
 }
 </script>
