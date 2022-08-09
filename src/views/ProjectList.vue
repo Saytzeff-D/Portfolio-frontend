@@ -18,7 +18,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="alert alert-danger" v-if="error !== ''">
+        <div class="alert alert-danger" v-if="error !== '' && projects.length == 0">
         {{error}}
         </div>
         <p class="h5" v-if="projects.length == 0 && error == ''">
