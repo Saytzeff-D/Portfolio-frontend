@@ -15,6 +15,12 @@
             <tbody>
                 <tr v-for="(each, i) in projects" :key="i" >
                     <td>{{i + 1}}</td>
+                    <td> {{each.projectName}} </td>
+                    <td> {{each.projectDesc}} </td>
+                    <td> {{each.mode}} </td>
+                    <td> {{each.repoLink}} </td>
+                    <td> {{each.deployedLink}} </td>
+                    <td> <button class="btn btn-danger">Delete</button> </td>
                 </tr>
             </tbody>
         </table>
