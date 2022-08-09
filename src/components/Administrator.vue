@@ -15,17 +15,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .pageContent{
         margin-left: 200px;
-        margin-top: 43px
+        margin-top: 43px;
     }
     .adminPage{
-        position: absolute;
+        /* position: absolute;
         top: 0;
         bottom: 0;
         right: 0;
-        left: 0;
+        left: 0; */
         background-color: gainsboro;
     }
 </style>
