@@ -39,6 +39,14 @@ const asyncAction = {
         axios.post(`${state.serverUrl}resume/${payload.type}`, {_id: payload._id}).then((res)=>{
             console.log(res.data)
         })
+    },
+    myProfile(context){
+        axios.get(`${context.state.serverUrl}portfolio/profile`).then((res)=>{
+            context.commit('setProfile', res.data.result)
+        }).catch((err)=>{
+            console.log(err)
+            context.commit('setProfile', 'An error has occurred')
+        })
     }
 }
 
