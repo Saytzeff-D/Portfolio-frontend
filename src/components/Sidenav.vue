@@ -2,7 +2,7 @@
         <div class="w3-bar w3-top w3-pink w3-large header">
                 <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" @click="openSideBar()" ><i class="fa fa-bars"></i></button>
                 <span class="w3-bar-item w3-left font-weight-bold py-3">My Portfolio Admin</span>
-                <span data-toggle='modal' data-target='#logoutModal' class='w3-right p-2 w3-hide-small font-weight-bold'>Logout <i class='fa fa-power-off'></i></span>
+                <span @click="logout()" style="cursor: pointer" class='w3-right p-2 w3-hide-small font-weight-bold'>Logout <i class='fa fa-power-off'></i></span>
             </div>
             <!-- {/* SideNav Menu */} -->
             <nav class="w3-sidebar w3-collapse w3-white w3-animate-left mySideBar" id="mySideBar" >
@@ -27,7 +27,7 @@
                     <router-link :to="{path: '/portfolio/project'}" active-class="active" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Your Projects </router-link>
                     <!-- <router-link :to="{path: '/portfolio/testimonial'}" active-class="active" class="w3-bar-item w3-button w3-padding"><i class="fa fa-ambulance fa-fw"></i>  Add Tesimonial </router-link> -->
                     <router-link :to="{path: '/portfolio/getInTouch'}" active-class="active" class="w3-bar-item w3-button w3-padding"><i class="fa fa-comment fa-fw"></i> Hired & Contacts </router-link>
-                    <p data-toggle='modal' data-target='#logoutModal' class="w3-bar-item w3-button w3-padding w3-hide-large"><i class="fa fa-power-off fa-fw"></i>  Logout</p> 
+                    <p class="w3-bar-item w3-button w3-padding w3-hide-large"><i class="fa fa-power-off fa-fw"></i>  Logout</p> 
                 </div>
             </nav>
 
@@ -55,6 +55,9 @@
                 document.getElementById('overlay').style.display = 'none'
                 this.count += 1
             }
+        },
+        logout(){
+            this.$router.push('/')
         }
     }
 }
