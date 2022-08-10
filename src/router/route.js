@@ -1,6 +1,6 @@
 import MyAdmin from '../components/Administrator.vue'
 import OverView from '../views/Overview.vue'
-import AdminProfile from '../components/Profile.vue'
+import AdminProfile from '../components/ProfileAdmin.vue'
 import MyHome from '../components/Home.vue'
 import AdminResume from '../components/Resume.vue'
 import ProjectAdmin from '../components/ProjectAdmin.vue'
