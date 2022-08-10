@@ -1,13 +1,16 @@
 <template>
-    <div>
-        <Overview />
+    <div class="w3-top">
+        <Header />
     </div>
 </template>
 
 <script>
-import Overview from '@/views/Overview.vue';
+import Header from '@/pages/Header.vue';
 export default {
     name: "MyHome",
-    components: { Overview }
+    components: {Header },
+    mounted(){
+        this.$store.dispatch('myProfile')
+    }
 }
 </script>
