@@ -63,8 +63,8 @@
             </div>
         </div>
         <div class="d-flex">
-            <button @click="saveProfile($event)" v-if="!showEditBtn && profile.length == 0" class="btn btn-danger mx-2">Save</button>
-            <button v-if="showEditBtn" class="btn btn-success mx-2">Edit</button>
+            <button @click="saveProfile($event)" v-if="!showEditBtn" class="btn btn-danger mx-2">Save</button>
+            <button @click="editProfile()" v-if="showEditBtn || profile.length !== 0" class="btn btn-success mx-2">Edit</button>
             <button class="btn btn-info mx-2">Preview</button>
         </div>
     </div>
@@ -96,7 +96,9 @@ export default {
             git: '',
             errorMsg: '',
             successMsg: '',
-            showEditBtn: false
+            showEditBtn: false,
+            edit: false,
+            editId: ''
         }
     },
     methods: {
@@ -104,12 +106,14 @@ export default {
             this.successMsg = ''
             this.errorMsg = ''
             e.preventDefault()
+            this.edit ? this.editId = this.profile[0]._id : ''
             axios.post(`${this.$store.state.serverUrl}portfolio/createProfile`, this.$data).then((res)=>{
-                console.log(res.data)
                 this.emptyInput()
+                this.$store.dispatch('myProfile')
                 this.successMsg = res.data.message
                 this.showEditBtn = true
-            }).catch(()=>{
+            }).catch((err)=>{
+                console.log(err)
                 this.errorMsg = 'An error has occurred'
             })
         },
@@ -126,6 +130,21 @@ export default {
             this.twi = ''
             this.inst = ''
             this.git = ''
+        },
+        editProfile(){
+            this.edit = true
+            this.fullName = this.profile[0].fullName
+            this.email = this.profile[0].email
+            this.mobile = this.profile[0].mobile
+            this.dob = this.profile[0].dob
+            this.bio = this.profile[0].bio
+            this.career = this.profile[0].career
+            this.location = this.profile[0].location
+            this.address = this.profile[0].address
+            this.fb = this.profile[0].fb
+            this.twi = this.profile[0].twi
+            this.inst = this.profile[0].inst
+            this.git = this.profile[0].git
         }
     },
     mounted(){
