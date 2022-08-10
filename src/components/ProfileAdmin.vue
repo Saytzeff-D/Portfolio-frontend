@@ -31,6 +31,9 @@ import AddProfile from '@/views/AddProfile.vue';
 import SiteImg from '../views/SiteImg.vue';
 export default {
     name: "AdminProfile",
-    components: { AddProfile, SiteImg }
+    components: { AddProfile, SiteImg },
+    mounted(){
+        this.$store.dispatch('myProfile')
+    }
 }
 </script>
