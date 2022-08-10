@@ -51,7 +51,7 @@
             </div>
             <div class="form-group col-md-3 col-6">
                 <label class="font-weight-bold">Twitter</label>
-                <input type="text" class="form-control" v-model="tw" />
+                <input type="text" class="form-control" v-model="twi" />
             </div>
             <div class="form-group col-md-3 col-6">
                 <label class="font-weight-bold">Instagram</label>
