@@ -2,11 +2,11 @@
     <header class="header text-justify mt-0" v-if="profile.length !== 0" v-bind:style="{backgroundImage: 'url(' + profile[0].headerImg + ')'}" >
         <div class="container">
             <ul class="social-icons pt-3">
-                <li class="social-item"><a class="social-link text-light" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a target="_blank" class="social-link text-light" href="https://facebook.com/Saytzeff.D/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a target="_blank" class="social-link text-light" href="https://twitter.com/DavifyRx"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a target="_blank" class="social-link text-light" href="mailto:ololadedavid15@gmail.com"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a target="_blank" class="social-link text-light" href="https://instagram.com/saytzeff_d"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a target="_blank" class="social-link text-light" href="https://github.com/Saytzeff-D"><i class="fa fa-github" aria-hidden="true"></i></a></li>
             </ul>  
             <div class="header-content">
                 <h4 class="header-subtitle" >Hello, I am</h4>
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .social-icons {
   list-style-type: none;
   padding-left: 0;
