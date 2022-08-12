@@ -71,7 +71,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .about-section {
   border-bottom: 1px solid #dee2e6;
 }
@@ -89,5 +89,26 @@ export default {
   width: 25px;
   height: 1.5px;
   background-color: #F85C70;
+}
+.social-icons {
+  list-style-type: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 180px;
+}
+
+.social-icons .social-link {
+  font-size: 18px;
+}
+
+.social-icons .social-link:hover {
+  color: #F85C70;
 }
 </style>
