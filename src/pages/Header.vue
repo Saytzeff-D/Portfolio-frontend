@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .social-icons {
   list-style-type: none;
   padding-left: 0;
