@@ -44,10 +44,8 @@
 <script>
 export default {
     name: 'NavBar',
-    computed: {
-        profile(){
-            return this.$store.getters.fetchProfile
-        }
+    props: {
+        profile: Array
     },
     data(){
         return{
@@ -63,7 +61,7 @@ export default {
         }
     },
     mounted(){
-        this.$store.dispatch('myProfile')
+        // this.$store.dispatch('myProfile')
     },
     created(){
         window.addEventListener('scroll', this.handleScroll);
