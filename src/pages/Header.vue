@@ -21,10 +21,8 @@
 <script>
 export default {
     name: 'PageHeader',
-    computed: {
-        profile(){
-            return this.$store.getters.fetchProfile
-        }
+    props: {
+        profile: Array
     }
 }
 </script>
