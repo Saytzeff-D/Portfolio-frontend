@@ -6,7 +6,7 @@
                 <h3 class="font-weight-light">Who am I ?</h3>
                 <span class="line mb-5"></span>
                 <h5 class="mb-3" v-if="profile.length !== 0">A {{profile[0].career}} Located In {{profile[0].location}}</h5>
-                <p class="mt-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.sit amet, Qui deserunt consequatur fugit repellendusillo voluptas?</p>
+                <p class="mt-20" v-if="profile.length !== 0" >{{profile[0].bio}}</p>
                 <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button>
             </div>
             <div class="col-lg-4 about-card">
@@ -30,27 +30,11 @@
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">My Expertise</h3>
                 <span class="line mb-5"></span>
-                <div class="row">
+                <div class="row" v-for="(each, i) in expert" :key="i">
                     <div class="col-1 text-danger pt-1"><i class="fa fa-widget icon-lg"></i></div>
                     <div class="col-10 ml-auto mr-3">
-                        <h6>UX Design</h6>
-                        <p class="subtitle"> exercitat Repellendus,  corrupt.</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="fa fa-paint-bucket icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Web Development</h6>
-                        <p class="subtitle">Lorem ipsum dolor sit consectetur.</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="fa fa-stats-up icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Digital Marketing</h6>
-                        <p class="subtitle">voluptate commodi illo voluptatib.</p>
+                        <h6>{{each.expert}}</h6>
+                        <p class="subtitle">{{each.expertDesc}}</p>
                         <hr>
                     </div>
                 </div>
@@ -63,10 +47,9 @@
 <script>
 export default {
     name: 'AboutMe',
-    computed: {
-        profile(){
-            return this.$store.getters.fetchProfile
-        }
+    props: {
+        profile: Array,
+        expert: Array
     }
 }
 </script>
