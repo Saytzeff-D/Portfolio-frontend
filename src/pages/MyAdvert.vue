@@ -29,7 +29,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="row">
                         <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="fa fa-face-smile icon-xl"></i></div>
+                            <div class="m-auto"><i class="fa fa-face-laugh fa-lg"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
                             <h1 class="text-danger font-weight-bold font40">200K</h1>
