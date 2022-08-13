@@ -7,11 +7,14 @@
         {{successMsg}}
         </div>
         <div class="form-row">
-                <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
+                <input class="form-control" placeholder="Expert Career" v-model="expert" />
+            </div>
+            <div class="form-group col-md-4">
+                <input class="form-control" placeholder="Brief Desc" v-model="expertDesc" />
+            </div>
+            <div class="form-group col-md-4">
                     <input class="form-control" placeholder="Duration" v-model="duration" />
-                </div>
-                <div class="form-group col-md-6">
-                    <input class="form-control" placeholder="Expert Career" v-model="expert" />
                 </div>
             </div>
             <button class="btn btn-danger" v-on:click="addExpertise($event)" >Add Expertise</button>
@@ -22,6 +25,7 @@
                     <tr>
                         <th>S/N</th>
                         <th>Expert</th>
+                        <th>Desc</th>
                         <th>Duration</th>
                         <th>Action</th>
                     </tr>
@@ -30,6 +34,7 @@
                     <tr v-for="(each, i) in expertTray" :key="i">
                         <td>{{i + 1}}</td>
                         <td>{{each.expert}}</td>
+                        <td>{{each.expertDesc}}</td>
                         <td>{{each.duration}}</td>
                         <td><button @click="deleteDetails(each._id)" class="btn btn-danger">Delete</button></td>
                     </tr>
@@ -50,6 +55,7 @@ export default {
         return{
             duration: '',
             expert: '',
+            expertDesc: '',
             successMsg: '',
             errorMsg: ''
         }
@@ -72,6 +78,7 @@ export default {
         },
         emptyInput(){
             this.duration = ''
+            this.expertDesc = ''
             this.expert = ''
         },
         deleteDetails(_id){
