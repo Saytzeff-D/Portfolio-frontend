@@ -6,7 +6,7 @@ import storeMutator from './mutations'
 const store = createStore({
     state() {
         return{
-            serverUrl: 'http://localhost:2020/',
+            serverUrl: 'https://davify-server.herokuapp.com/',
             project: [],
             projectError: '',
             expertiseTray: [],
