@@ -24,7 +24,7 @@ const storeMutator = {
         state.myProfile = payload
     },
     modifyWebLayout(state, payload){
-        payload == 'dark' ? state.webLayout = {bgColor: 'black', textColor: 'white'} : {bgColor: 'white', textColor: 'black'}
+        payload == 'black' ? state.webLayout = {bgColor: 'black', textColor: 'white'} : {bgColor: 'white', textColor: 'black'}
     }
 }
 
