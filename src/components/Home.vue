@@ -2,10 +2,9 @@
     <div>
         <Header :profile="profile" />
         <NavBar :profile="profile" />
-        <button @click="switchMode()" class="btn btn-danger btn-component" data-spy="affix" data-offset-top="400">
-        <i class="fa fa-arrow-left"></i>
-        <span v-if="layout.bgColor == 'black'"> <i class="fa fa-eye"></i> Light Mode </span>
-        <span v-if="layout.bgColor !== 'black'" > <i class="fa fa-eye-slash"></i> Dark Mode </span>
+        <button @click="switchMode()" class="font-weight-bold" v-bind:class="[layout.bgColor == 'black' ? 'btn btn-light btn-component' : 'btn btn-dark btn-component']" data-spy="affix" data-offset-top="400">
+        <span v-if="layout.bgColor == 'black'"><i class="fa fa-eye pr-3"></i> Light Mode </span>
+        <span v-if="layout.bgColor !== 'black'" ><i class="fa fa-eye-slash pr-3"></i> Dark Mode </span>
          </button>
         <AboutMe :profile="profile" :expert="expert" />
         <MyResume :expert="expert" :education="education" :skills="skills" :language="language" />

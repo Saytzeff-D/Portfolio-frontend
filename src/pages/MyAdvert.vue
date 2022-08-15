@@ -51,8 +51,8 @@
             </div>
         </div>
             <div class="d-flex justify-content-center py-5">
-                <button class="btn btn-danger font-weight-bolder px-5 mx-2">Hire Me</button>
-                <button class="btn btn-outline-danger mx-2">Explore My Project</button>
+                <button class="btn btn-danger font-weight-bolder px-5 m-2">Hire Me</button>
+                <button class="btn btn-outline-danger m-2">Explore My Project</button>
             </div>
     </section>
     </div>
