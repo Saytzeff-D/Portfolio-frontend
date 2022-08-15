@@ -22,6 +22,9 @@ const myGetters = {
     },
     fetchProfile(state){
         return state.myProfile
+    },
+    getLayout(state){
+        return state.webLayout
     }
 }
 

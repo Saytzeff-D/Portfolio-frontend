@@ -7,10 +7,10 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="row ">
                         <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="fa fa-github icon-xl"></i></div>
+                            <div class="m-auto"><i class="fa fa-clock-o icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">500</h1>
+                            <h1 class="text-danger font-weight-bold font40">500+</h1>
                             <p class="text-light mb-1">Hours Worked</p>
                         </div>
                     </div>
@@ -18,40 +18,41 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="row">
                         <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="fa fa-send-back icon-xl"></i></div>
+                            <div class="m-auto"><i class="fa fa-github icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">50K</h1>
-                            <p class="text-light mb-1">Project Finished</p>
+                            <h1 class="text-danger font-weight-bold font40">700+</h1>
+                            <p class="text-light mb-1">GitHub Commits</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="row">
                         <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="fa fa-face-laugh fa-lg"></i></div>
+                            <div class="m-auto"><i class="fa fa-file-o icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">200K</h1>
-                            <p class="text-light mb-1">Happy Clients</p>
+                            <h1 class="text-danger font-weight-bold font40">40+</h1>
+                            <p class="text-light mb-1">Exisiting Repository</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="row">
                         <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="fa fa-heart-broken icon-xl"></i></div>
+                            <div class="m-auto"><i class="fa fa-star-o icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">2k</h1>
-                            <p class="text-light mb-1">Coffee Drinked</p>
+                            <h1 class="text-danger font-weight-bold font40">15+</h1>
+                            <p class="text-light mb-1">Project Stars</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
             <div class="d-flex justify-content-center py-5">
-                <button class="btn btn-danger font-weight-bolder px-5">Hire Me</button>
+                <button class="btn btn-danger font-weight-bolder px-5 mx-2">Hire Me</button>
+                <button class="btn btn-outline-danger mx-2">Explore My Project</button>
             </div>
     </section>
     </div>

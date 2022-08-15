@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg" v-bind:class="[isSticky ? stickyClass : '']" data-spy="affix" data-offset-top="510">
+    <div v-bind:class="[isSticky ? stickyClass : '']">
+        <nav class="navbar navbar-expand-lg shadow-lg" v-bind:class="[layout.bgColor == 'black' ? 'navbar-dark bg-dark' : 'navbar-light bg-white']" data-spy="affix" data-offset-top="510">
         <div class="container">
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
                 <ul class="navbar-nav brand">
                     <img v-if="profile.length !== 0" :src="profile[0].photo" alt="" class="brand-img">
                     <li class="brand-txt" v-if="profile.length !== 0">
-                        <h5 class="brand-title">{{profile[0].fullName}}</h5>
+                        <h5 v-bind:class="[layout.bgColor == 'black' ? 'text-light' : '']">{{profile[0].fullName}}</h5>
                         <div class="brand-subtitle">{{profile[0].career}}</div>
                     </li>
                 </ul>
@@ -46,6 +46,11 @@ export default {
     name: 'NavBar',
     props: {
         profile: Array
+    },
+    computed: {
+      layout(){
+        return this.$store.getters.getLayout
+      }
     },
     data(){
         return{
@@ -148,14 +153,6 @@ export default {
     -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-/* @supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sticky-top {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1020;
-  }
-} */
 .navbar.affix .brand-img {
   top: -10px;
   opacity: 0;

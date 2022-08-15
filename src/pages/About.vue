@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container-fluid">
+        <div class="container-fluid" v-bind:style="[layout.bgColor == 'black' ? {backgroundColor: layout.bgColor, color: layout.textColor} : '']">
         <div id="about" class="row about-section">
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Who am I ?</h3>
@@ -50,6 +50,11 @@ export default {
     props: {
         profile: Array,
         expert: Array
+    },
+    computed: {
+      layout(){
+        return this.$store.getters.getLayout
+      }
     }
 }
 </script>

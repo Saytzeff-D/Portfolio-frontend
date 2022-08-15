@@ -1,18 +1,18 @@
 <template>
     <div>
-        <section class="section" id="resume">
+        <section class="section" v-bind:style="[layout.bgColor == 'black' ? {backgroundColor: layout.bgColor, color: layout.textColor} : '']" id="resume">
         <div class="container">
             <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
             <div class="row">
                 <div class="col-md-6 col-lg-4">
-                    <div class="card">
+                    <div class="card" v-bind:class="[layout.bgColor == 'black' ? 'bg-dark' : '']">
                        <div class="card-header">
                             <div class="mt-2">
                                 <h4>Expertise</h4>
                                 <span class="line"></span>  
                             </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" v-bind:class="[layout.bgColor == 'black' ? 'text-white' : '']">
                             <div class="" v-for="(each, i) in expert" :key="i">
                                 <h6 class="title text-danger">{{each.duration}}</h6>
                                 <P>{{each.expert}}</P>
@@ -23,14 +23,14 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="card">
+                    <div class="card" v-bind:class="[layout.bgColor == 'black' ? 'bg-dark' : '']">
                        <div class="card-header">
                             <div class="mt-2">
                                 <h4>Education</h4>
                                 <span class="line"></span>  
                             </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" v-bind:class="[layout.bgColor == 'black' ? 'text-white' : '']">
                             <div class="" v-for="(each, i) in education" :key="i">
                                 <h6 class="title text-danger">{{each.dateObtained}}</h6>
                                 <P>{{each.cert}}</P>
@@ -41,14 +41,14 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card">
+                    <div class="card" v-bind:class="[layout.bgColor == 'black' ? 'bg-dark' : '']">
                        <div class="card-header">
                             <div class="pull-left">
                                 <h4 class="mt-2">Skills</h4>
                                 <span class="line"></span>  
                             </div>
                         </div>
-                        <div class="card-body pb-2">
+                        <div class="card-body pb-2"   v-bind:class="[layout.bgColor == 'black' ? 'text-white' : '']">
                             <div class="" v-for="(each, i) in skills" :key="i">
                                 <h6>{{each.skill}}</h6>
                                 <div class="progress mb-3">
@@ -57,14 +57,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" v-bind:class="[layout.bgColor == 'black' ? 'bg-dark' : '']">
                        <div class="card-header">
                             <div class="pull-left">
                                 <h4 class="mt-2">Languages</h4>
                                 <span class="line"></span>  
                             </div>
                         </div>
-                        <div class="card-body pb-2">
+                        <div class="card-body pb-2" v-bind:class="[layout.bgColor == 'black' ? 'text-white' : '']">
                             <div class="" v-for="(each, i) in language" :key="i">
                                 <h6>{{each.language}}</h6>
                                 <div class="progress mb-3">
@@ -88,6 +88,11 @@ export default {
        education: Array,
        skills: Array,
        language: Array
+    },
+    computed: {
+        layout(){
+            return this.$store.getters.getLayout
+        }
     }
 }
 </script>

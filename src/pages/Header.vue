@@ -9,6 +9,7 @@
                 <li class="social-item"><a target="_blank" class="social-link text-light" href="https://github.com/Saytzeff-D"><i class="fa fa-github" aria-hidden="true"></i></a></li>
             </ul>  
             <div class="header-content">
+              <img v-if="profile.length !== 0" :src="profile[0].photo" alt="" class="d-block d-md-none photo rounded-circle shadow-lg">
                 <h4 class="header-subtitle" >Hello, I am</h4>
                 <h1 class="header-title"> {{profile[0].fullName}} </h1>
                 <h6 class="header-mono" > {{profile[0].career}} </h6>
@@ -28,6 +29,11 @@ export default {
 </script>
 
 <style scoped>
+.photo{
+  width: 150px; 
+  height: 150px; 
+  /* border: 10px solid black */
+}
 .social-icons {
   list-style-type: none;
   padding-left: 0;
