@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center py-3 h6 text-danger" v-bind:style="{backgroundColor: layout.bgColor}">
+    <div class="text-center py-3 h6 text-danger m-0" v-bind:style="{backgroundColor: layout.bgColor}">
         &copy; 2022 | Saytzeff-D | Full Stack Developer | DavifyRx
     </div>
 </template>
