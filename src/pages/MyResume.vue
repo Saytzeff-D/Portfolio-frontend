@@ -15,8 +15,8 @@
                         <div class="card-body" v-bind:class="[layout.bgColor == 'black' ? 'text-white' : '']">
                             <div class="" v-for="(each, i) in expert" :key="i">
                                 <h6 class="title text-danger">{{each.duration}}</h6>
-                                <P>{{each.expert}}</P>
-                                <P class="subtitle">{{each.expertDesc}}</P>
+                                <p>{{each.expert}}</p>
+                                <p class="subtitle">{{each.expertDesc}}</p>
                                 <hr v-if="i !== expert.length - 1">
                             </div>
                         </div>
@@ -33,8 +33,8 @@
                         <div class="card-body" v-bind:class="[layout.bgColor == 'black' ? 'text-white' : '']">
                             <div class="" v-for="(each, i) in education" :key="i">
                                 <h6 class="title text-danger">{{each.dateObtained}}</h6>
-                                <P>{{each.cert}}</P>
-                                <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error corrupti recusandae obcaecati odit repellat ducimus cum, minus tempora aperiam at.</P>
+                                <p>{{each.cert}}</p>
+                                <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error corrupti recusandae obcaecati odit repellat ducimus cum, minus tempora aperiam at.</p>
                                 <hr>                            
                             </div>
                         </div>
