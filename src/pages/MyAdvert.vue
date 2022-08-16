@@ -51,16 +51,37 @@
             </div>
         </div>
             <div class="d-flex justify-content-center py-5">
-                <button class="btn btn-danger font-weight-bolder px-5 m-2">Hire Me</button>
-                <button class="btn btn-outline-danger m-2">Explore My Project</button>
+                <button data-toggle="modal" data-target="#hireMe" class="btn btn-danger font-weight-bolder px-5 m-2">Hire Me</button>
+                <button v-on:click="explore()" class="btn btn-outline-danger m-2">Explore My Project</button>
             </div>
     </section>
+
+    <div class="modal fade" id="hireMe">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="h2">Hire Me</p>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <HireMe />
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 </template>
 
 <script>
+import HireMe from './HireMe.vue';
 export default {
-    name: 'MyAdvert'
+    name: "MyAdvert",
+    components: { HireMe },
+    methods:{
+        explore(){
+            this.$router.push('/explore')
+        }
+    }
 }
 </script>
 
