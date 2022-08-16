@@ -1,7 +1,7 @@
 <template>
     <Header :profile="profile" />
     <NavBar :profile="profile" />
-    <div class="container-fluid" v-bind:style="[layout.bgColor == 'black' ? {backgroundColor: layout.bgColor, color: layout.textColor} : '']">
+    <div class="container-fluid py-4" v-bind:style="[layout.bgColor == 'black' ? {backgroundColor: layout.bgColor, color: layout.textColor} : '']">
         <p class="py-5 h2">My Projects</p>
         <div>
             <span class="spinner-border" v-if="projectError == '' && projects.length == 0" v-bind:class="[layout.bgColor == 'black' ? 'text-white' : 'text-dark']"></span>
@@ -46,6 +46,9 @@ export default{
         },
         layout(){
             return this.$store.getters.getLayout
+        },
+        projectError(){
+            return this.$store.getters.projectError
         }
     },
     components: { Header, NavBar },
@@ -55,3 +58,14 @@ export default{
     }
 }
 </script>
+
+<style scoped>
+.title {
+  font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1300 - 300)));
+}
+.subtitle {
+  font-weight: 500;
+  opacity: 1;
+  color: #fff;
+}
+</style>
