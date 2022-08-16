@@ -4,6 +4,7 @@ import AdminProfile from '../components/ProfileAdmin.vue'
 import MyHome from '../components/Home.vue'
 import AdminResume from '../components/Resume.vue'
 import ProjectAdmin from '../components/ProjectAdmin.vue'
+import ExploreProject  from '../pages/ExploreProject.vue'
 import NotFound  from '../views/NotFound.vue'
 
 const routes = [
@@ -32,6 +33,10 @@ const routes = [
     {
         path: '/',
         component: MyHome
+    },
+    {
+        path: '/explore',
+        component: ExploreProject
     },
     {
         path: '/:pathMatch(.*)*',
