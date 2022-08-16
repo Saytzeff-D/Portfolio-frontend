@@ -36,11 +36,6 @@
 <script>
 export default {
     name: 'ProjectList',
-    data(){
-        return{
-            
-        }
-    },
     computed: {
         projects (){
             return this.$store.getters.allMyProjects
