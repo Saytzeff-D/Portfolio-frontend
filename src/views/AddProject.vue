@@ -28,11 +28,15 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
+                    <label>Major Language</label>
+                    <input class="form-control" placeholder="JavaScript, HTML, CSS" v-model="majorLang" />
+                </div>
+                <div class="form-group col-md-4">
                     <label>Repository Link</label>
                     <input class="form-control" placeholder="GitHub Link" v-model="repoLink" />
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label>Deployed Link</label>
                     <input class="form-control" placeholder="Deployed Link" v-model="deployedLink" />
                 </div>
@@ -51,6 +55,7 @@ export default {
             projectName: '',
             projectDesc: '',
             mode: '',
+            majorLang: '',
             repoLink: '',
             deployedLink: '',
             errorMsg: '',
@@ -60,7 +65,7 @@ export default {
     methods: {
         addProject(e){
             e.preventDefault()
-            axios.post(`${this.$store.state.serverUrl}addProject`, this.$data).then((res)=>{
+            axios.post(`${this.$store.state.serverUrl}project/addProject`, this.$data).then((res)=>{
                 console.log(res.data)
                 if(res.data.message == 'Success'){
                     this.emptyInput()
@@ -77,6 +82,7 @@ export default {
         emptyInput(){
             this.projectName = ''
             this.projectDesc = ''
+            this.majorLang = ''
             this.mode = ''
             this.repoLink = ''
             this.deployedLink = ''
