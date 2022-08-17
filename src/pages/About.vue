@@ -30,9 +30,11 @@
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">My Expertise</h3>
                 <span class="line mb-5"></span>
-                <div class="row" v-for="(each, i) in expert" :key="i">
-                    <div class="col-1 text-danger pt-1"><i class="fa fa-widget icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
+                <div class="row w-100 mx-0" v-for="(each, i) in expert" :key="i">
+                    <div class="col-2 text-danger pt-1">
+                      <img :src="each.icon" class="img-fluid" />
+                    </div>
+                    <div class="col-10 ml-auto">
                         <h6>{{each.expert}}</h6>
                         <p class="subtitle">{{each.expertDesc}}</p>
                         <hr>
@@ -43,6 +45,7 @@
     </div>
     </div>
 </template>
+
 
 <script>
 export default {
