@@ -7,7 +7,7 @@ const store = createStore({
     state() {
         return{
             serverUrl: 'https://davify-server.herokuapp.com/',
-            webLayout: {bgColor: 'white', textColor: 'black'},
+            webLayout: {bgColor: 'black', textColor: 'white'},
             project: [],
             projectError: '',
             expertiseTray: [],
