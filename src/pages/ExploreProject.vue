@@ -6,8 +6,8 @@
         <div>
             <span class="spinner-border" v-if="projectError == '' && projects.length == 0" v-bind:class="[layout.bgColor == 'black' ? 'text-white' : 'text-dark']"></span>
         </div>
-        <div class="row mx-0 w-100 card-deck mb-4" v-if="projects.length !== 0">
-            <div class="col-md-6 col-lg-3" v-for="(each, i) in projects" :key="i">
+        <div class="row mb-4 w-100 mx-auto" v-if="projects.length !== 0">
+            <div class="card-deck mx-auto col-6 col-lg-4 mb-4" v-for="(each, i) in projects" :key="i">
                     <div class="card" v-bind:class="[layout.bgColor == 'black' ? 'bg-dark text-white' : '']">
                        <div class="card-header">
                             <div class="mt-2">
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+            </div>
         </div>
     </div>
 </template>
