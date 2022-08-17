@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="contact">
         <section class="bg-dark text-center">
             <p class="font-weight-bolder text-white h2 py-4">I'm available for freelance</p>
         <div class="section container">
