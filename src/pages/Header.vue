@@ -13,7 +13,7 @@
                 <h4 class="header-subtitle" >Hello, I am</h4>
                 <h1 class="header-title"> {{profile[0].fullName}} </h1>
                 <h6 class="header-mono" > {{profile[0].career}} </h6>
-                <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
+                <button @click="printResume()" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
             </div>
         </div>
     </header>
@@ -24,6 +24,11 @@ export default {
     name: 'PageHeader',
     props: {
         profile: Array
+    },
+    methods: {
+      printResume(){
+        window.open('https://docs.google.com/viewer?url='+this.profile[0].myCv+'&embedded=true')
+      }
     }
 }
 </script>
