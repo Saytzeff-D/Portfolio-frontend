@@ -34,8 +34,24 @@
                             <div class="" v-for="(each, i) in education" :key="i">
                                 <h6 class="title text-danger">{{each.dateObtained}}</h6>
                                 <p>{{each.cert}}</p>
-                                <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error corrupti recusandae obcaecati odit repellat ducimus cum, minus tempora aperiam at.</p>
+                                <p class="subtitle">{{each.schoolObtained}}</p>
                                 <hr>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" v-bind:class="[layout.bgColor == 'black' ? 'bg-dark' : '']">
+                       <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2">Languages</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body pb-2" v-bind:class="[layout.bgColor == 'black' ? 'text-white' : '']">
+                            <div class="" v-for="(each, i) in language" :key="i">
+                                <h6>{{each.language}}</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-danger" role="progressbar" v-bind:style="{width: each.grade}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -51,22 +67,6 @@
                         <div class="card-body pb-2"   v-bind:class="[layout.bgColor == 'black' ? 'text-white' : '']">
                             <div class="" v-for="(each, i) in skills" :key="i">
                                 <h6>{{each.skill}}</h6>
-                                <div class="progress mb-3">
-                                    <div class="progress-bar bg-danger" role="progressbar" v-bind:style="{width: each.grade}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" v-bind:class="[layout.bgColor == 'black' ? 'bg-dark' : '']">
-                       <div class="card-header">
-                            <div class="pull-left">
-                                <h4 class="mt-2">Languages</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body pb-2" v-bind:class="[layout.bgColor == 'black' ? 'text-white' : '']">
-                            <div class="" v-for="(each, i) in language" :key="i">
-                                <h6>{{each.language}}</h6>
                                 <div class="progress mb-3">
                                     <div class="progress-bar bg-danger" role="progressbar" v-bind:style="{width: each.grade}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
