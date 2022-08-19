@@ -5,6 +5,7 @@ import MyHome from '../components/Home.vue'
 import AdminResume from '../components/Resume.vue'
 import ProjectAdmin from '../components/ProjectAdmin.vue'
 import ExploreProject  from '../pages/ExploreProject.vue'
+import HireMessage from '../views/HireMessages.vue'
 import NotFound  from '../views/NotFound.vue'
 
 const routes = [
@@ -27,6 +28,10 @@ const routes = [
             {
                 path: '/portfolio/project',
                 component: ProjectAdmin
+            },
+            {
+                path: '/portfolio/getInTouch',
+                component: HireMessage
             }
         ]
     },
