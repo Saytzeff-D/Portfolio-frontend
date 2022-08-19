@@ -7,7 +7,7 @@
                 <span class="line mb-5"></span>
                 <h5 class="mb-3" v-if="profile.length !== 0">A {{profile[0].career}} Located In {{profile[0].location}}</h5>
                 <p class="mt-20" v-if="profile.length !== 0" >{{profile[0].bio}}</p>
-                <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button>
+                <a v-if="profile.length !== 0" v-bind:href="profile[0].myCv" class="btn btn-outline-danger" download="David_Atanda"><i class="fa fa-download"></i> Download My CV</a>
             </div>
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Personal Info</h3>
