@@ -7,10 +7,13 @@
         {{successMsg}}
         </div>
         <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <input class="form-control" placeholder="Certificate" v-model="cert" />
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
+                    <input class="form-control" placeholder="School Obtained" v-model="schoolObtained" />
+                </div>
+                <div class="form-group col-md-4">
                     <input class="form-control" placeholder="Date Obtained" v-model="dateObtained" />
                 </div>
             </div>
@@ -21,6 +24,7 @@
                     <tr>
                         <th>S/N</th>
                         <th>Certificate</th>
+                        <th>School Obtained</th>
                         <th>Date Obtained</th>
                         <th>Action</th>
                     </tr>
@@ -29,6 +33,7 @@
                     <tr v-for="(each, i) in education" :key="i">
                         <td>{{i + 1}}</td>
                         <td>{{each.cert}}</td>
+                        <td>{{each.schoolObtained}}</td>
                         <td>{{each.dateObtained}}</td>
                         <td><button @click="deleteDetails(each._id)" class="btn btn-danger">Delete</button></td>
                     </tr>
@@ -60,6 +65,7 @@ export default {
         return {
             cert: '',
             dateObtained: '',
+            schoolObtained: '',
             errorMsg: '', 
             successMsg: ''
         }
