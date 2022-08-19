@@ -28,7 +28,9 @@
                 <label class="font-weight-bold">Your Resume/CV</label>
                 <input @change="onInputFileChange($event, 'myCv')" type="file" class="form-control" />
                 <button @click="uploadMyCv()" class="btn btn-danger my-1">Upload your Resume</button>
-                <img v-if="profile.length !== 0 && profile[0].myCv" :src="profile[0].myCv" class="img-fluid rounded-lg" />
+                <p class="h4" v-if="profile.length !== 0 && profile[0].myCv">
+                Resume Uploaded
+                </p>
             </div>
     </div>
 </template>
