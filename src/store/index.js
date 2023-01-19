@@ -6,7 +6,7 @@ import storeMutator from './mutations'
 const store = createStore({
     state() {
         return{
-            serverUrl: 'https://davify-server.onrender.com',
+            serverUrl: 'https://davify-server.onrender.com/',
             webLayout: {bgColor: 'black', textColor: 'white'},
             project: [],
             projectError: '',
