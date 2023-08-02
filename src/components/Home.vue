@@ -1,15 +1,21 @@
 <template>
     <div>
-        <Header :profile="profile" />
-        <NavBar :profile="profile" />
-        <button @click="switchMode()" class="font-weight-bold" v-bind:class="[layout.bgColor == 'black' ? 'btn btn-light btn-component' : 'btn btn-dark btn-component']" data-spy="affix" data-offset-top="400">
-        <span v-if="layout.bgColor == 'black'"><i class="fa fa-eye pr-3"></i> Light Mode </span>
-        <span v-if="layout.bgColor !== 'black'" ><i class="fa fa-eye-slash pr-3"></i> Dark Mode </span>
-         </button>
-        <AboutMe :profile="profile" :expert="expert" />
-        <MyResume :expert="expert" :education="education" :skills="skills" :language="language" />
-        <MyAdvert />
-        <Footer />
+        <div v-if="profile.length == 0" class="d-flex justify-content-center py-5">
+            <p class="spinner-border font-weight-bold display-1 d-block"></p>
+            <!-- <p class="font-weight-light display-5">Loading...</p> -->
+        </div>
+        <div v-if="profile.length !== 0">
+            <Header :profile="profile" />        
+            <NavBar :profile="profile" />
+            <button @click="switchMode()" class="font-weight-bold" v-bind:class="[layout.bgColor == 'black' ? 'btn btn-light btn-component' : 'btn btn-dark btn-component']" data-spy="affix" data-offset-top="400">
+            <span v-if="layout.bgColor == 'black'"><i class="fa fa-eye pr-3"></i> Light Mode </span>
+            <span v-if="layout.bgColor !== 'black'" ><i class="fa fa-eye-slash pr-3"></i> Dark Mode </span>
+            </button>
+            <AboutMe :profile="profile" :expert="expert" />
+            <MyResume :expert="expert" :education="education" :skills="skills" :language="language" />
+            <MyAdvert />
+            <Footer />
+        </div>
     </div>
 </template>
 
