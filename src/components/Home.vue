@@ -1,8 +1,7 @@
 <template>
     <div>
         <div v-if="profile.length == 0" class="d-flex justify-content-center py-5">
-            <p class="spinner-border font-weight-bold display-1 d-block"></p>
-            <!-- <p class="font-weight-light display-5">Loading...</p> -->
+            <p class="spinner-border font-weight-bold display-1 d-block"></p>            
         </div>
         <div v-if="profile.length !== 0">
             <Header :profile="profile" />        
