@@ -26,6 +26,9 @@ export default {
         profile: Array
     },
     methods: {
+      mounted() {
+        // when the page mounts
+      },
       printResume(){
         window.open('https://docs.google.com/viewer?url='+this.profile[0].myCv+'&embedded=true')
       }
